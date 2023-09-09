@@ -1,10 +1,10 @@
 "use client"
-import React,{useCallback} from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams,usePathname } from 'next/navigation'
 
-import './firstSection.css'
+import './style.css'
 import TozLogo from '../../public/images/ToZ_Logo_footer3x.png'
 import Stars from '../../public/images/stars.png'
 import Calendar from '../../public/images/30-day_130-day.png'
@@ -20,7 +20,7 @@ const FirstSection = () => {
   
   return (
     <>
-      <section className="section">
+      <section className="section-one">
         <div className="flex items-center w-full h-24 px-5p pt-5 pb-2.5 mb-12 w-nav section-navigation">
           <div className="flex justify-between items-center mx-auto container">
             <a href="#" className="section-navigation_logo">
@@ -33,7 +33,7 @@ const FirstSection = () => {
             </a>
           </div>
         </div>
-        <div className="pt-12 pb-20 mx-auto container section-content">
+        <div className="pt-12 pb-20 mx-auto container section section-content">
           <div className="flex justify-end mt-20">
             <div className="div-block">
               <div className="text-white text-right text-3xl mb-8 line-through">78 €</div>
@@ -48,7 +48,7 @@ const FirstSection = () => {
                   style={{ maxWidth: '150px' }} className="mr-2" />
                 <p className="text-white text-sm mb-0">Βαθμολογήθηκε 4.9/5 από 1500+ Πελάτες!</p>
               </div>
-              <h2 className="text-coralblue text-left font-bold text-6xl mb-8 ">Αντιμετωπίζετε προβλήματα στο κρεβάτι;</h2>
+              <h2 className="text-coralblue text-left font-bold text-6xl mb-8 leading-tight">Αντιμετωπίζετε προβλήματα στο κρεβάτι;</h2>
               <div className="text-white text-left text-3xl mb-4 ">Κατακτήστε την κρεβατοκάμαρα με τον Κεραυνό του Δία!</div>
 
               <div className="flex flex-row">
@@ -74,7 +74,7 @@ const FirstSection = () => {
             </div>
           </div>
           <div className="flex flex-col items-center w-auto pt-20 pb-6 text-center section-content_button">
-            <Link href={pathname+'packs-page?transaction_id='+search} className="packs-page-btn button">ΠΑΡΑΓΓΕΛΙΑ &gt;&gt;</Link>
+            <Link href={`${pathname}packs-page${search ? "?transaction_id="+search:"" }`} className="packs-page-btn button">ΠΑΡΑΓΓΕΛΙΑ &gt;&gt;</Link>
             <div className="section-content_block">
               <div className="pb-2 mb-2 mx-auto text-center w-full">
               <Image src={Lock}

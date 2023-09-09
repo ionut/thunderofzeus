@@ -1,4 +1,5 @@
-.section{
+/* section one */
+.section-one{
     background-color: #002d81;
     background-image: url(../../public/images/img_bundle_Cream-Tablets_1img_bundle_Cream-Tablets.png), linear-gradient(rgba(0, 45, 129, .41), rgba(0, 45, 129, .41)), url(../../public/images/ha.png), url(../../public/images/toz-bg.png);
     background-position: 85% 60%, 0 0, 280px 0, 50% 12%;
@@ -21,10 +22,6 @@
     line-height: 24px;
     text-decoration: none;
     transition: all .2s;
-}
-
-.section-content{
-    max-width: 940px;
 }
 
 .section-content_block{
@@ -50,3 +47,18 @@
     background-color: #af0003;
     font-size: 25px;
 }
+
+/* section two */
+.section-2 {
+    background-color: #e0e0e0;
+    background-image: linear-gradient(to right, rgba(224, 224, 224, .93), rgba(234, 234, 234, .59) 27%, rgba(255, 255, 255, 0)), url(../../public/images/photos-1.png);
+    background-position: 0 0, 100%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    overflow: hidden;
+  }
+
+  .section-2_wrapper{
+    max-width: 800px;
+    width: 100%;
+  }

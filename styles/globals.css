@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .banner-announcement{
-    min-height: auto;
-    color: #fff;
-    text-align: center;
-    background-color: #ff0015;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 5%;
-    display: flex;
-    overflow: hidden;
-} */
+html.sr .load-hidden {
+    visibility: hidden;
+   }
+
+   .section{
+    max-width: 940px;
+}
