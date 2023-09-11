@@ -15,7 +15,8 @@ module.exports = {
       'white': '#ffffff',
       'coralblue':'#43d0ff',
       'blue':'#2500b9',
-      'whitetransparent':'#ffffffa1'
+      'whitetransparent':'#ffffffa1',
+      'blacktransparent':'#00000045'
     },
     extend: {
       spacing: {

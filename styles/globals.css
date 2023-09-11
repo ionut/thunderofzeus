@@ -8,4 +8,9 @@ html.sr .load-hidden {
 
    .section{
     max-width: 940px;
+    margin:0 auto;
+}
+
+.vertical-line{
+    min-width:4px;
 }

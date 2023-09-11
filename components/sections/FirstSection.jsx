@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams,usePathname } from 'next/navigation'
@@ -17,7 +17,12 @@ const FirstSection = () => {
   const searchParams = useSearchParams()
  
   const search = searchParams.get('transaction_id')
-  
+    const ref =useRef(null);
+
+    const goSection=()=>{
+      ref.current?.scrollIntoView({behavior:'smooth'});
+    }
+    
   return (
     <>
       <section className="section-one">
@@ -28,15 +33,15 @@ const FirstSection = () => {
                 alt="ThunderOfZeus Logo"
                 style={{ width: '150px' }} />
             </a>
-            <a href="#GO-HERE" className="flex items-center justify-center section-navigation_button">
+            <button onClick={goSection} className="flex items-center justify-center section-navigation_button">
               ΠΑΡΑΓΓΕΛΙΑ &gt;&gt;
-            </a>
+            </button>
           </div>
         </div>
-        <div className="pt-12 pb-20 mx-auto container section section-content">
-          <div className="flex justify-end mt-20">
+        <div className="pt-12 pb-20 mx-auto section section-content">
+          <div className="flex justify-end mt-24">
             <div className="div-block">
-              <div className="text-white text-right text-3xl mb-8 line-through">78 €</div>
+              <div className="text-white text-right text-3xl line-through">78 €</div>
               <div className="text-coralblue text-right font-bold text-7xl mb-8 ">39 €</div>
             </div>
           </div>
@@ -73,7 +78,7 @@ const FirstSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center w-auto pt-20 pb-6 text-center section-content_button">
+          <div ref={ref} className="flex flex-col items-center w-auto pt-20 pb-6 text-center section-content_button">
             <Link href={`${pathname}packs-page${search ? "?transaction_id="+search:"" }`} className="packs-page-btn button">ΠΑΡΑΓΓΕΛΙΑ &gt;&gt;</Link>
             <div className="section-content_block">
               <div className="pb-2 mb-2 mx-auto text-center w-full">

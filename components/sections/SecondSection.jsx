@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { RevealWrapper } from 'next-reveal'
+import { motion } from "framer-motion"
 import './style.css'
 import Cactus from '../../public/images/b2_img_web.png'
 
@@ -8,12 +9,25 @@ const SecondSection = () => {
     return (
         <>
             <section className="section-2">
-                <div className="flex justify-center items-center gap-20 py-36 mx-auto section">
+                <div className="flex justify-center items-center gap-20 py-36 section">
                     <div className="flex flex-col justify-center items-center basis-3/5">
                         <h2 className="text-6xl text-left text-blue font-bold leading-tight mb-7">Γιατί συμβαίνουν προβλήματα στο κρεβάτι;</h2>
-                        <Image src={Cactus}
-                            alt="Cactus"
-                            className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300' />
+                        <motion.div whileHover={{
+                            position: 'relative',
+                            zIndex: 1,
+                            background: 'transparent',
+                            scale: [1, 1.2, 1],
+                            rotate: [0, 10, -10, 0],
+                            transition: {
+                                duration: .5
+                            }
+                        }}>
+                            <Image src={Cactus}
+                                alt="Cactus"
+                                loading='lazy'
+                                className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300' />
+                        </motion.div>
+
                     </div>
                     <RevealWrapper load-hidden origin='right' easing='ease-in' reset='true'>
                         <div className="section-2_wrapper">
