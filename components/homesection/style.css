@@ -8,22 +8,6 @@
     overflow: hidden;
 }
 
-.section-navigation_button{
-    outline-offset: 0px;
-    color: #20207e;
-    text-align: center;
-    letter-spacing: -.02em;
-    background-color: #fff;
-    border-radius: 48px;
-    outline: 2px solid rgba(0, 0, 0, 0);
-    padding: 8px 24px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 24px;
-    text-decoration: none;
-    transition: all .2s;
-}
-
 .section-content_block{
     width:500px;
 }

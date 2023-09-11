@@ -1,0 +1,9 @@
+.pack-section--1{ height: auto;
+background-color: #002d81;
+background-image: linear-gradient(rgba(0, 45, 129, .41), rgba(0, 45, 129, .41)), url(../../public/images/transparent.png);
+background-position: 85% 60%, 0 0, 50%, 50% 12%;
+background-size: auto, cover;
+background-attachment: scroll, fixed;
+font-family: Montserrat, sans-serif;
+overflow: hidden;
+}

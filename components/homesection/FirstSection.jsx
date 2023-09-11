@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useSearchParams,usePathname } from 'next/navigation'
+import { useSearchParams, usePathname } from 'next/navigation'
 
 import './style.css'
 import TozLogo from '../../public/images/ToZ_Logo_footer3x.png'
@@ -15,14 +15,15 @@ import Lock from '../../public/images/lock.png'
 const FirstSection = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
- 
-  const search = searchParams.get('transaction_id')
-    const ref =useRef(null);
 
-    const goSection=()=>{
-      ref.current?.scrollIntoView({behavior:'smooth'});
-    }
-    
+  const search = searchParams.get('transaction_id')
+  
+  const ref = useRef(null);
+
+  const goSection = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
       <section className="section-one">
@@ -79,17 +80,17 @@ const FirstSection = () => {
             </div>
           </div>
           <div ref={ref} className="flex flex-col items-center w-auto pt-20 pb-6 text-center section-content_button">
-            <Link href={`${pathname}packs-page${search ? "?transaction_id="+search:"" }`} className="packs-page-btn button">ΠΑΡΑΓΓΕΛΙΑ &gt;&gt;</Link>
+            <Link href={`${pathname}packs${search ? "?transaction_id=" + search : ""}`} className="packs-page-btn button">ΠΑΡΑΓΓΕΛΙΑ &gt;&gt;</Link>
             <div className="section-content_block">
               <div className="pb-2 mb-2 mx-auto text-center w-full">
-              <Image src={Lock}
+                <Image src={Lock}
                   alt="Lock"
                   style={{ width: '20px' }} className="inline-block mr-1" />
                 <span className="text-white text-xs">
                   <strong>100% Ασφαλείς Συναλλαγές SSL<br />
                   </strong>
                 </span>
-                <Image src="https://uploads-ssl.webflow.com/644aa1d7e1cf402db3aaaead/644aa1d7e1cf407708aaaef5_badges.png" loading="lazy" alt="Badge" className="inline-block" width={200} height={25}/>
+                <Image src="https://uploads-ssl.webflow.com/644aa1d7e1cf402db3aaaead/644aa1d7e1cf407708aaaef5_badges.png" loading="lazy" alt="Badge" className="inline-block" width={200} height={25} />
               </div>
               <p className="text-white text-sm mb-0">* Παρακαλείστε να σημειώσετε ότι ο τοπικός ΦΠΑ μπορεί να διαφέρει ανάλογα με τους κανονισμούς της χώρας από την οποία παραγγέλνετε τα προϊόντα μας.</p>
             </div>

@@ -1,10 +1,10 @@
 import React from 'react'
-import FirstSection from '../sections/FirstSection'
-import SecondSection from '../sections/SecondSection'
-import ThirdSection from '../sections/ThirdSection'
-import FourthSection from '../sections/FourthSection'
-import FifthSection from '../sections/FifthSection'
-import SixthSection from '../sections/SixthSection'
+import FirstSection from '../homesection/FirstSection'
+import SecondSection from '../homesection/SecondSection'
+import ThirdSection from '../homesection/ThirdSection'
+import FourthSection from '../homesection/FourthSection'
+import FifthSection from '../homesection/FifthSection'
+import SixthSection from '../homesection/SixthSection'
 
 const Homepage = () => {
   return (

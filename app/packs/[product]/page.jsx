@@ -1,8 +1,9 @@
 import React from 'react'
 
-const page = () => {
+const page = ({params}) => {
+
   return (
-    <div>packs page</div>
+    <div>{params.product}</div>
   )
 }
 
